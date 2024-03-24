@@ -90,6 +90,7 @@ def main():
     pymorphy2_311_hotfix()
     morph = pymorphy2.MorphAnalyzer()
 
+#для поиска всех форм токена
     my_dict ={}
     for token in unique_tokens:
         if morph.parse(token)[0].normal_form in my_dict.keys():
